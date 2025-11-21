@@ -7,14 +7,16 @@ import org.springframework.data.relational.core.mapping.Table;
 /*
     We do not have @Entity in R2DBC.
     @Table / @Column are not really required here. but adding it here for your reference...!
+
+    Spring data 4.0 seems to expect table and column names in uppercase.
  */
-@Table("customer")
+@Table("CUSTOMER")
 public class Customer {
 
     @Id
     private Integer id;
 
-    @Column("name")
+    @Column("NAME")
     private String name;
     private String email;
 
